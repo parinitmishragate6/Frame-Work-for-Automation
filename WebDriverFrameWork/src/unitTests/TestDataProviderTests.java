@@ -46,6 +46,6 @@ public class TestDataProviderTests {
 	public void testEmail() {
 		
 		String email = testDataReader.getEmail("Test004");
-		Assert.assertEquals(email, "parinit14@abc.com", "Incorrect value of email retrieved");
+		Assert.assertEquals(email, "parinit4@abc.com", "Incorrect value of email retrieved");
 	}
 }
