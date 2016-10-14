@@ -27,11 +27,27 @@ public class RunConfigurationTests {
 		}
 	}
 	
-	@Test
-	public void testLoadTimeout() {
+	@Test(priority = 0)
+	public void testSleepTime() {
+		
+		long sleepTime = runConfigReader.getSleepTime();
+		Assert.assertEquals(sleepTime, 2000, "Sleep time retrieved is Incorrect");
+		
+	}
+	
+	@Test(priority = 1)
+	public void testPageLoadTimeout() {
 		
 		long pageLoadTimeout = runConfigReader.getPageLoadTimeout();
 		Assert.assertEquals(pageLoadTimeout, 5000, "Page load time retrieved is Incorrect");
+		
+	}
+	
+	@Test(priority = 2)
+	public void testImplicitWaitTimeout() {
+		
+		long implicitWaitTimeout = runConfigReader.getImplicitWaitTimeout();
+		Assert.assertEquals(implicitWaitTimeout, 1000, "Implicit Wait time retrieved is Incorrect");
 		
 	}
 	
