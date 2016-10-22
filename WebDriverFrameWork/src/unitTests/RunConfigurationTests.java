@@ -21,7 +21,7 @@ public class RunConfigurationTests {
 	public void setUp() {
 		
 		try {
-			runConfigReader = new RunConfigurationReader("E:\\MyWorkSpace\\WebDriverFrameWork\\RunDataProvider\\framework.properties");
+			runConfigReader = new RunConfigurationReader("RunDataProvider\\framework.properties");
 		} catch (IOException e) {
 			Assert.assertEquals(false, "Not able to open Configuration file. Stake Trace is " + e.getStackTrace());
 		}
@@ -46,16 +46,16 @@ public class RunConfigurationTests {
 	@Test(priority = 2)
 	public void testImplicitWaitTimeout() {
 		
-		long implicitWaitTimeout = runConfigReader.getImplicitWaitTimeout();
-		Assert.assertEquals(implicitWaitTimeout, 1000, "Implicit Wait time retrieved is Incorrect");
+		long implictWaitTimeout = runConfigReader.getImplicitWaitTimeout();
+		Assert.assertEquals(implictWaitTimeout, 2000, "Implicit Wait time retrieved is Incorrect");
 		
 	}
 	
-	@Test
+	@Test(priority = 3)
 	public void testIEServerPath() {
 		
 		String ieServerPath = runConfigReader.getIEServerPath();
-		Assert.assertEquals(ieServerPath, "E:\\Trunk\\Drivers\\IEDriverServer_x64_2.53.1\\IEDriverServer.exe", "IE server path is Incorrect");
+		Assert.assertEquals(ieServerPath, "C:\\Users\\parinit\\Documents\\Library\\Drivers\\IEDriverServer_x64_2.53.1\\IEDriverServer.exe", "IE server path is Incorrect");
 		
 	}
 	
