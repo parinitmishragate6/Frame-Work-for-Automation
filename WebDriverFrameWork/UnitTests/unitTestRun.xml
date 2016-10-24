@@ -5,7 +5,7 @@
       <class name="unitTests.RunConfigurationTests"/>
       <class name="unitTests.TestDataProviderTests"/>
       <class name="unitTests.BrowserFactoryTests"/>
-      <!--  -->class name="unitTests.DataProviderFactoryTests"/>
+      <class name="unitTests.DataProviderFactoryTests"/>
     </classes>
   </test> <!-- Default test -->
 </suite> <!-- Default suite -->
