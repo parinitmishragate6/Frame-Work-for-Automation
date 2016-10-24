@@ -4,7 +4,7 @@
 	<path id="classPath">
 		<pathelement path="./bin"/>
 		<pathelement path="./src"/>
-		<fileset dir="C:\Users\parinit\Documents\Library" includes="**/*.jar"/>
+		<fileset dir="C:\Trunk\Library" includes="**/*.jar"/>
 	</path>
 	
 	<target name="build">
@@ -17,8 +17,8 @@
 	
 	<taskdef name="testng" classname="org.testng.TestNGAntTask">
 		<classpath>
-			<pathelement location="C:\Users\parinit\Documents\Library\TestNG n Jcommander Jars\testng-6.9.10.jar"/>
-			<pathelement location="C:\Users\parinit\Documents\Library\TestNG n Jcommander Jars\jcommander-1.48.jar"/>
+			<pathelement location="C:\Trunk\Library\TestNG n Jcommander Jars\testng-6.9.13.6.jar" />
+			<pathelement location="C:\Trunk\Library\TestNG n Jcommander Jars\jcommander-1.58.jar" />
 		</classpath>
 		<classpath refid="classPath"/>
 	</taskdef>
