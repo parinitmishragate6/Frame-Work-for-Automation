@@ -21,7 +21,7 @@ public class TestDataProviderTests {
 	public void setUp() {
 		
 		try {
-			testDataReader = new TestDataProviderExcel("E:\\MyWorkSpace\\WebDriverFrameWork\\TestDataProvider\\TestData.xls");
+			testDataReader = new TestDataProviderExcel("TestDataProvider\\TestData.xls");
 		} catch (IOException e) {
 			Assert.assertEquals(false, "Not able to Open test data file. Stake trace is " + e.getStackTrace());
 		}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="FrameWorkBuild" default="unittests">
+	
+	<path id="classPath">
+		<pathelement path="./bin"/>
+		<pathelement path="./src"/>
+		<fileset dir="C:\Users\parinit\Documents\Library" includes="**/*.jar"/>
+	</path>
+	
+	<target name="build">
+		<mkdir dir="bin"/>
+		<javac destdir="bin">
+			<src path="src"/>
+			<classpath refid="classPath"/>
+		</javac>
+	</target>
+	
+	<taskdef name="testng" classname="org.testng.TestNGAntTask">
+		<classpath>
+			<pathelement location="C:\Users\parinit\Documents\Library\TestNG n Jcommander Jars\testng-6.9.10.jar"/>
+			<pathelement location="C:\Users\parinit\Documents\Library\TestNG n Jcommander Jars\jcommander-1.48.jar"/>
+		</classpath>
+		<classpath refid="classPath"/>
+	</taskdef>
+	
+	<target name="unittests" depends="build">
+		<testng outputdir=".\output" classpathref="classPath">
+			<xmlfileset dir=".\UnitTests" includes="unitTestRun.xml"/>
+		</testng>
+	</target>
+	
+</project>
