@@ -1,0 +1,6 @@
+Starting tests with browser Firefox
+Stopping tests with browser Firefox
+Starting tests with browser Chrome
+Stopping tests with browser Chrome
+Starting tests with browser InternetExplorer
+Stopping tests with browser InternetExplorer
